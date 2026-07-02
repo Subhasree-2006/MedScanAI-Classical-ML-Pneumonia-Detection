@@ -1,175 +1,84 @@
 # 🩺 MedScanAI: Classical Machine Learning Approach for Pneumonia Detection
 
-An explainable **Classical Machine Learning** framework for automated **Pneumonia Detection** from Chest X-ray images using **Local Binary Pattern (LBP)** feature extraction, **XGBoost** classification, and **SHAP Explainable AI**.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-Image%20Processing-green)
+![XGBoost](https://img.shields.io/badge/XGBoost-Classifier-red)
+![SHAP](https://img.shields.io/badge/Explainable%20AI-SHAP-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-# 📌 Project Overview
+## 📖 Overview
 
-Pneumonia is one of the leading respiratory diseases worldwide. Early diagnosis is essential for effective treatment, but manual interpretation of chest X-ray images is time-consuming and depends on expert radiologists.
+MedScanAI is an Explainable Classical Machine Learning framework for automated pneumonia detection from chest X-ray images.
 
-This project proposes an **Explainable Classical Machine Learning Framework** that detects pneumonia from chest X-ray images using handcrafted image features instead of deep learning. The framework compares multiple preprocessing methods, feature extraction techniques, dimensionality reduction approaches, and machine learning classifiers to identify the most effective pipeline.
+Unlike most medical imaging projects that rely on deep learning, this project demonstrates that carefully designed feature engineering combined with machine learning can provide an efficient and interpretable solution.
 
----
-
-# 🎯 Objectives
-
-* Detect pneumonia from chest X-ray images.
-* Compare Histogram Equalization and CLAHE preprocessing.
-* Compare HOG and LBP feature extraction.
-* Compare PCA, LDA and SelectKBest.
-* Evaluate Logistic Regression, Random Forest, SVM and XGBoost.
-* Handle class imbalance using SMOTE.
-* Explain model predictions using SHAP.
+The project compares multiple preprocessing methods, feature extraction techniques, dimensionality reduction methods, and machine learning classifiers to identify the best-performing pipeline.
 
 ---
 
-# 📂 Dataset
+## 🎯 Objectives
+
+- Detect pneumonia from chest X-ray images.
+- Compare Histogram Equalization and CLAHE.
+- Compare HOG and Local Binary Pattern (LBP).
+- Compare PCA and LDA.
+- Evaluate Logistic Regression, Random Forest, SVM, SMOTE-SVM and XGBoost.
+- Explain predictions using SHAP.
+
+---
+
+## 📂 Dataset
 
 **Dataset:** Chest X-ray Pneumonia Dataset
 
 **Source:** Kaggle
 
-Classes:
-
-* Normal
-* Pneumonia
-
-Dataset Statistics
-
-| Category | Images |
-| -------- | -----: |
-| Training |   5216 |
-| Testing  |    624 |
-| Classes  |      2 |
+| Class | Images |
+|-------|--------:|
+| Normal | 1583 |
+| Pneumonia | 4273 |
+| Total | 5856 |
 
 ---
 
-# ⚙️ Technologies Used
+## 🛠 Technologies
 
-* Python
-* Google Colab
-* OpenCV
-* NumPy
-* Pandas
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* XGBoost
-* SHAP
-* Joblib
+- Python
+- Google Colab
+- OpenCV
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- XGBoost
+- SHAP
+- Joblib
 
 ---
 
-# 🔬 Methodology
+# 🔬 Workflow
 
 Chest X-ray Images
 
 ↓
 
-Image Preprocessing
-
-* Resize (128×128)
-* Histogram Equalization
+Resize (128×128)
 
 ↓
-
-Feature Extraction
-
-* Histogram of Oriented Gradients (HOG)
-* Local Binary Pattern (LBP)
-
-↓
-
-Feature Scaling
-
-* StandardScaler
-
-↓
-
-Feature Optimization
-
-* PCA
-* LDA
-* SelectKBest
-
-↓
-
-Machine Learning Models
-
-* Logistic Regression
-* Random Forest
-* Support Vector Machine
-* XGBoost
-
-↓
-
-Performance Evaluation
-
-↓
-
-Explainability using SHAP
-
----
-
-# 📊 Experiments Performed
-
-✅ Histogram Equalization vs CLAHE
-
-✅ HOG vs LBP
-
-✅ HOG + LBP
-
-✅ PCA vs LDA
-
-✅ SelectKBest Feature Selection
-
-✅ Logistic Regression
-
-✅ Random Forest
-
-✅ Support Vector Machine
-
-✅ SMOTE-SVM
-
-✅ XGBoost
-
-✅ Cross Validation
-
-✅ ROC Curve
-
-✅ Confusion Matrix
-
-✅ SHAP Explainability
-
----
-
-# 📈 Experimental Results
-
-| Experiment                                 | Accuracy (%) |
-| ------------------------------------------ | -----------: |
-| Logistic Regression                        |        72.60 |
-| Random Forest                              |        62.82 |
-| SVM                                        |        73.08 |
-| SMOTE SVM                                  |        73.72 |
-| XGBoost (HOG)                              |        74.20 |
-| LDA + Logistic Regression                  |        71.63 |
-| HOG + SelectKBest + PCA                    |        70.67 |
-| HOG + LBP + XGBoost                        |        70.83 |
-| CLAHE + LBP + XGBoost                      |        70.03 |
-| **Histogram Equalization + LBP + XGBoost** |  **75.80** ⭐ |
-
----
-
-# 🏆 Best Model
-
-**Pipeline**
 
 Histogram Equalization
 
 ↓
 
-Local Binary Pattern (LBP)
+Feature Extraction
+
+• HOG
+
+• LBP
 
 ↓
 
@@ -177,88 +86,161 @@ StandardScaler
 
 ↓
 
-XGBoost
+PCA
+
+↓
+
+Machine Learning
+
+• Logistic Regression
+
+• Random Forest
+
+• SVM
+
+• XGBoost
+
+↓
+
+Performance Evaluation
 
 ↓
 
 SHAP Explainability
 
-**Best Accuracy:** **75.80%**
+---
+
+# 🧪 Experiments
+
+✔ Histogram Equalization vs CLAHE
+
+✔ HOG vs LBP
+
+✔ HOG + LBP
+
+✔ PCA vs LDA
+
+✔ SelectKBest
+
+✔ Logistic Regression
+
+✔ Random Forest
+
+✔ SVM
+
+✔ SMOTE-SVM
+
+✔ XGBoost
+
+✔ Cross Validation
+
+✔ ROC Curve
+
+✔ SHAP Explainability
+
+---
+
+# 📊 Experimental Results
+
+| Model | Accuracy |
+|--------------------------|---------:|
+| Logistic Regression | 72.60% |
+| Random Forest | 62.82% |
+| SVM | 73.08% |
+| SMOTE + SVM | 73.72% |
+| XGBoost | 74.20% |
+| HOG + LBP + XGBoost | 70.83% |
+| CLAHE + LBP + XGBoost | 70.03% |
+| ⭐ Histogram Equalization + LBP + XGBoost | **75.80%** |
+
+---
+
+# 📈 Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Sensitivity
+- Specificity
+- ROC-AUC
+- Confusion Matrix
+- SHAP Analysis
 
 ---
 
 # 📁 Repository Structure
 
-```text
-MedScanAI-Classical-ML-Pneumonia-Detection
-│
-├── notebooks/
-├── figures/
-├── models/
-├── report/
-├── results/
-├── README.md
-├── requirements.txt
-├── LICENSE
-└── .gitignore
+```
+MedScanAI-Classical-ML-Pneumonia-Detection/
+
+│── notebooks/
+│   └── MedScanAI_Classical_ML_Pneumonia_Detection.ipynb
+
+│── report/
+│   └── MedScanAI_Project_Report.pdf
+
+│── figures/
+│   ├── workflow.png
+│   ├── histogram_equalization.png
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── shap_summary.png
+
+│── models/
+│   ├── model.pkl
+│   ├── scaler.pkl
+│   └── pca.pkl
+
+│── results/
+│   ├── metrics.csv
+│   └── experiments.csv
+
+│── README.md
+│── requirements.txt
+│── LICENSE
 ```
 
 ---
 
-# 🚀 Installation
+# ▶️ How to Run
 
 ```bash
 git clone https://github.com/Subhasree-2006/MedScanAI-Classical-ML-Pneumonia-Detection.git
+
 cd MedScanAI-Classical-ML-Pneumonia-Detection
+
 pip install -r requirements.txt
 ```
 
----
-
-# ▶️ Running the Project
-
-1. Open the notebook in Google Colab.
-2. Upload `kaggle.json`.
-3. Download the dataset automatically.
-4. Run all notebook cells in order.
-5. View evaluation metrics and SHAP plots.
+Open the notebook in Google Colab and run all cells.
 
 ---
 
 # 🔮 Future Work
 
-* Multi-class lung disease classification
-* External clinical dataset validation
-* Comparison with deep learning models
-* Deployment as a web application
-* Clinical decision-support integration
+- Multi-class lung disease detection
+- External clinical dataset validation
+- Web application deployment
+- Comparison with deep learning models
+- Mobile healthcare integration
 
 ---
 
 # 👥 Contributors
 
-**Subha Sree M**
-
-B.Tech Bioinformatics
-
-SASTRA Deemed University
-
----
-
-**Twinkle Jayasankari S**
-
-B.Tech Bioinformatics
-
-SASTRA Deemed University
+- **Subha Sree M**
+- **Twinkle Jayasankari S**
 
 ---
 
 # 📄 License
 
-This project is distributed under the **MIT License**.
+This project is licensed under the MIT License.
 
 ---
 
-# ⭐ If you found this project useful
+# ⭐ Support
 
-Please consider giving this repository a **star**.
+If you found this project useful, please consider giving this repository a ⭐ Star.
+
