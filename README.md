@@ -1,4 +1,4 @@
-# 🩺 MedScanAI: Classical Machine Learning Framework for Pneumonia Detection
+# 🩺 MedScanAI: Classical Machine Learning Approach for Pneumonia Detection
 
 An explainable **Classical Machine Learning** framework for automated **Pneumonia Detection** from Chest X-ray images using **Local Binary Pattern (LBP)** feature extraction, **XGBoost** classification, and **SHAP Explainable AI**.
 
