@@ -208,7 +208,7 @@ MedScanAI-Classical-ML-Pneumonia-Detection
 # 🚀 Installation
 
 ```bash
-git clone https://github.com/<your-username>/MedScanAI-Classical-ML-Pneumonia-Detection.git
+git clone https://github.com/Subhasree-2006/MedScanAI-Classical-ML-Pneumonia-Detection.git
 cd MedScanAI-Classical-ML-Pneumonia-Detection
 pip install -r requirements.txt
 ```
