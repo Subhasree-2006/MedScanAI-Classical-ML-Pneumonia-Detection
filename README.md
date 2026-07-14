@@ -187,11 +187,6 @@ MedScanAI-Classical-ML-Pneumonia-Detection/
 │   ├── roc_curve.png
 │   ├── shap_summary.png
 
-│── models/
-│   ├── model.pkl
-│   ├── scaler.pkl
-│   └── pca.pkl
-
 │── results/
 │   ├── metrics.csv
 │   └── experiments.csv
@@ -200,7 +195,11 @@ MedScanAI-Classical-ML-Pneumonia-Detection/
 │── requirements.txt
 │── LICENSE
 ```
+## Pre-trained Models
 
+The trained model files are not included in this repository due to GitHub file size considerations.
+
+You can regenerate them by running the notebook from start to finish.
 ---
 
 # ▶️ How to Run
